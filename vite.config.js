@@ -9,11 +9,15 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
+    allowedHosts: ['smart-class-nw34.onrender.com'],
     proxy: {
       '/api': {
         target: 'http://localhost:8081',
         changeOrigin: true,
       },
     },
+  },
+  preview: {
+    allowedHosts: ['smart-class-nw34.onrender.com'],
   },
 })
