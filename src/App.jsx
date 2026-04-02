@@ -15,6 +15,8 @@ import AssignmentsPage from './pages/AssignmentsPage';
 import AttendancePage from './pages/AttendancePage';
 import SubjectsPage from './pages/SubjectsPage';
 import StudyMaterialsPage from './pages/StudyMaterialsPage';
+import SignupPage from './pages/SignupPage';
+
 
 
 
@@ -25,7 +27,9 @@ function App() {
 
   return (
     <Routes>
+      <Route path="/signup" element={!user ? <SignupPage /> : <Navigate to="/" />} />
       <Route path="/login" element={!user ? <LoginPage /> : <Navigate to="/" />} />
+
       <Route path="/change-password" element={user && user.firstLogin ? <ChangePasswordPage /> : <Navigate to="/" />} />
 
       {/* Protected Routes inside Layout */}

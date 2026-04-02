@@ -81,6 +81,12 @@ const LoginPage = () => {
             {loading ? 'Logging in...' : 'Login into SmartClass'}
           </button>
         </form>
+
+        <div className="mt-8 text-center">
+            <p className="text-sm text-gray-500 font-medium">
+                Don't have an account? <a href="/signup" className="text-indigo-600 font-bold hover:underline transition-all">Sign Up</a>
+            </p>
+        </div>
       </div>
     </div>
   );
